@@ -245,6 +245,30 @@
 // ____________________________________________________________________
 
 // Знайти найбільше число паліндром, яке утворюється завдяки добутку двох простих п'ятизначних чисел.
+//
+// const checkForPalindrome = num => num.toString() === num.toString().split('').reverse().join('')
+//
+// function getPalindrome() {
+//     for (let i = 99999; i > 10000; i--) {
+//
+//         for (let j = 99999; j > 10000; j--) {
+//
+//             if (i % i === 0 && j % j === 0) {
+//                 if (checkForPalindrome(i * j)) {
+//
+//                     return i * j;
+//                 }
+//
+//             }
+//         }
+//     }
+// }
+//
+// console.time('test');
+//
+// console.log(getPalindrome());
+//
+// console.timeEnd('test');
 
 //     ____________________________________________________________________
 
