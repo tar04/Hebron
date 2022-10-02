@@ -1,15 +1,15 @@
 // Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
 // function clock() {
 //     for (let i = 1; i <= 2; i++) {
-//         console.log(`${i} хвилина`)
+//         console.log(`${i} хвилина`);
 //
 //         for (let j = 1; j < 60; j++) {
-//             console.log(`${j} секунда`)
+//             console.log(`${j} секунда`);
 //         }
 //     }
 // }
 //
-// clock()
+// clock();
 
 // Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
 //
@@ -47,41 +47,43 @@
 //
 //     [0, 0, 1, 1, 1, 2, 2] -> [0, 0, 1, 1, 2, 2, 1]
 //
-//const arr = [1, 1, 1, 2, 3, 3, 3, 3];
-//
 // function sortNums(arr) {
 //     const arr2 = [];
 //     const arr3 = [];
+//
 //     while (arr.length) {
-//         console.log(arr)
 //         if (arr[0] === arr[1] && arr[0] === arr[2]) {
-//             let item = arr.shift()
-//             arr3.push(item)
+//             let item = arr.shift();
+//             arr3.push(item);
+//
 //         } else {
-//             let item = arr.shift()
-//             arr2.push(item)
+//             let item = arr.shift();
+//             arr2.push(item);
+//
 //         }
 //     }
-//     return arr2.concat(arr3)
+//     return arr2.concat(arr3);
 // }
 //
-// console.log(sortNums(arr))
+// console.log(sortNums([1, 1, 1, 2, 3, 3, 3, 3]));
 
 // ____________________________________________________________
 
 // Створити функцію, яка приймає число і повертає текст як у прикладі:
-//     3275  —>  "3000 + 200 + 70 +5"
+//     3275  —>  "3000 + 200 + 70 + 5"
 //
 // function getDecimals(number, res = []) {
-//     const d = +`1${'0'.repeat((number + '').length - 1)}`
+//     const d = +`1${'0'.repeat((number + '').length - 1)}`;
+//
 //     if (number) {
-//         res.push(Math.trunc(number / d) * d)
-//         getDecimals(number - Math.trunc(number / d) * d, res)
+//         res.push(Math.trunc(number / d) * d);
+//         getDecimals(number - Math.trunc(number / d) * d, res);
 //     }
-//     return res.join(' + ')
+//
+//     return res.join(' + ');
 // }
 //
-// console.log(getDecimals(3275))
+// console.log(getDecimals(3275));
 
 // ____________________________________________________________
 
@@ -90,7 +92,7 @@
 //
 //version 1
 // function getNum(numbers) {
-//     let obj = {}
+//     let obj = {};
 //
 //     for (const number of numbers) {
 //         obj[number] = obj[number] + 1 || 0;
@@ -98,7 +100,7 @@
 //
 //     for (const key in obj) {
 //         if (!obj[key]) {
-//             return +key
+//             return +key;
 //         }
 //     }
 // }
@@ -108,7 +110,7 @@
 //version 2
 // console.log([1, 2, 3, 4, 5, 2, 4, 1, 3].reduce((acc, item, _, array) => {
 //     if (!(array.length-array.filter(i => i !== item).length-1)){
-//         return item
+//         return item;
 //     }
 //     return acc;
 // }));
@@ -123,7 +125,7 @@
 // GOOD | DOGO -> true
 //
 // function isAnagram(str1,str2) {
-//     return [...str1].sort().join('') ===[...str2].sort().join('')
+//     return [...str1].sort().join('') ===[...str2].sort().join('');
 // }
 //
 // console.log(isAnagram('ANAGRAM', 'MGANRAA'));
@@ -144,10 +146,10 @@
 //     }
 //
 //     if (n === 2 || n === 0) {
-//         return 'YES'
+//         return 'YES';
 //     }
 //
-//     return 'NO'
+//     return 'NO';
 // }
 //
 // console.log(isExDegree(256));
@@ -163,12 +165,12 @@
 //
 // function sum(n) {
 //     if (n){
-//         return n+sum(n-1)
+//         return n+sum(n-1);
 //     }
-//     return n
+//     return n;
 // }
 //
-// console.log(sum(9))
+// console.log(sum(9));
 
 // ______________________________________________________________
 
@@ -177,10 +179,10 @@
 //     При вирішенні цієї задачі не можна користуватись циклами.
 //
 // function checkForPalindrome(str) {
-//     return str.toLowerCase() === str.toLowerCase().split('').reverse().join('') ? 'YES' : 'NO'
+//     return str.toLowerCase() === str.toLowerCase().split('').reverse().join('') ? 'YES' : 'NO';
 // }
 //
-// console.log(checkForPalindrome('madam'))
+// console.log(checkForPalindrome('madam'));
 
 // _______________________________________________________________
 
@@ -193,10 +195,10 @@
 // function countOnes(number) {
 //     const numbersWithoutZeros = number.toString().split('00')[0];
 //     const arrWithOnes = numbersWithoutZeros.split('').filter(i => i === '1');
-//     return arrWithOnes.length
+//     return arrWithOnes.length;
 // }
 //
-// console.log(countOnes(217649194758610011111))
+// console.log(countOnes(217649194758610011111));
 
 // _________________________________________________________________
 
@@ -215,15 +217,15 @@
 //
 //     for (const item of this) {
 //         if (!Array.isArray(item)) {
-//             startArray.push(item)
+//             startArray.push(item);
 //         } else {
-//             item.customFlat(startArray)
+//             item.customFlat(startArray);
 //         }
 //     }
 //
 //     return startArray;
 // }
-// arr.flat()
+//
 // console.log(arr.customFlat([1,2,3]));
 
 //     ___________________________________________________________________
@@ -231,8 +233,7 @@
 // Знайти набільший елемент в масиві за допомогою reduce
 //     [1,6,9,0,17,88,4,7] -> 88
 //
-//console.log([1,6,9,0,17,88,4,7].reduce((acc, item) =>  item > acc ? item : acc));
-
+// console.log([1,6,9,0,17,88,4,7].reduce((acc, item) =>  (item > acc) ? item : acc));
 
 // ____________________________________________________________________
 
@@ -263,15 +264,15 @@
 // function typeLetter(letter) {
 //     return new Promise((resolve) => {
 //         setTimeout(() => {
-//             resolve(letter)
-//         }, Math.ceil(Math.random() * 1000))
-//     })
+//             resolve(letter);
+//         }, Math.ceil(Math.random() * 1000));
+//     });
 // }
 //
 // async function typewriter(text) {
 //     for (const el of text) {
-//         console.log(await typeLetter(el))
+//         console.log(await typeLetter(el));
 //     }
 // }
 //
-// typewriter("Hello World")
+// typewriter("Hello World");
