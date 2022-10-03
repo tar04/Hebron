@@ -179,7 +179,13 @@
 //     При вирішенні цієї задачі не можна користуватись циклами.
 //
 // function checkForPalindrome(str) {
-//     return str.toLowerCase() === str.toLowerCase().split('').reverse().join('') ? 'YES' : 'NO';
+//
+//     if (str.toLowerCase() === str.toLowerCase().split('').reverse().join('')){
+//         return 'YES'
+//     }
+//     return 'NO';
+//     //АБО
+//     // return str.toLowerCase() === str.toLowerCase().split('').reverse().join('') ? 'YES' : 'NO';
 // }
 //
 // console.log(checkForPalindrome('madam'));
