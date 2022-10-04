@@ -38,47 +38,46 @@
 // clock2();
 
 // Відтворити роботу годинника, відрахувавши час, який передає користувач у форматі clock(hour, minute, second) {
-
-function logHours(hour) {
-    for (let i = 0; i < hour; i++) {
-        logMinutes()
-        console.error(`${i + 1} година`)
-    }
-}
-
-function logMinutes(minute = 60) {
-    for (let i = 0; i < minute; i++) {
-        logSeconds()
-        if(i+1!==60) {
-            console.warn(`${i + 1} хвилина`)
-        }
-    }
-}
-
-function logSeconds(second = 60) {
-    for (let i = 0; i < second; i++) {
-        if(i+1!==60){
-            console.log(`${i + 1} секунда`)
-        }
-    }
-}
-
-function clock(hour, minute, second) {
-    hour = hour || 0;
-    minute = minute || 0;
-    second = second || 0;
-
-    if ((hour >= 0 && hour < 24) && (minute >= 0 && minute < 60) && (second >= 0 && second < 60)) {
-        hour && logHours(hour);
-        minute && logMinutes(minute)
-        second && logSeconds(second)
-    } else {
-        console.error("Не валідні дані")
-    }
-}
-
-clock(1,2,12);
-
+//
+// function logHours(hour) {
+//     for (let i = 0; i < hour; i++) {
+//         logMinutes()
+//         console.error(`${i + 1} година`)
+//     }
+// }
+//
+// function logMinutes(minute = 60) {
+//     for (let i = 0; i < minute; i++) {
+//         logSeconds()
+//         if (i + 1 !== 60) {
+//             console.warn(`${i + 1} хвилина`)
+//         }
+//     }
+// }
+//
+// function logSeconds(second = 60) {
+//     for (let i = 0; i < second; i++) {
+//         if (i + 1 !== 60) {
+//             console.log(`${i + 1} секунда`)
+//         }
+//     }
+// }
+//
+// function clock(hour, minute, second) {
+//     hour = hour || 0;
+//     minute = minute || 0;
+//     second = second || 0;
+//
+//     if ((hour >= 0 && hour < 24) && (minute >= 0 && minute < 60) && (second >= 0 && second < 60)) {
+//         hour && logHours(hour);
+//         minute && logMinutes(minute)
+//         second && logSeconds(second)
+//     } else {
+//         console.error("Не валідні дані")
+//     }
+// }
+//
+// clock(1, 2, 12);
 
 // __________________________________________________________
 
